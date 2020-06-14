@@ -25,7 +25,7 @@ class Fofa_Query_URLs_with_Domain(DiscoverableTransform):
             for info in results_list:
                 url = response.addEntity(URL)
                 url.addProperty("url",value=info[0])
-                url.addProperty("short-title",value=info[1][:10])
+                url.addProperty("short-title",value=info[1])
                 url.addProperty("title",value=info[1])
         except IOError:
             response.addUIMessage("发生了错误", messageType=UIM_PARTIAL)
